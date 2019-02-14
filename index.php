@@ -7,20 +7,12 @@
     <body>
         Ez az index.php
         <?php
-			//lottohuzas
-                        $kihuzottak=0;
-                        while($kihuzottak<5)
-                        {
-                            $sorsoltszam=rand(1,90);
-                            if(!isset($tomb[$sorsoltszam]))
-                            {
-                                $tomb[$sorsoltszam]=1;
-                                $kihuzottak++;
-                            }
-                        }
-                        var_dump($tomb);
-                         echo "ez msr s szam tomb!";
-            echo "itt mar a php script fut";
+            $sorsolt= sorsolas();
+            var_dump($sorsolt);
+	//lottohuzas
+               
+                         echo "Ezek voltak a számok!";
+            echo "Itt mar a php script fut";
         // put your code here
         ?>
     </body>
