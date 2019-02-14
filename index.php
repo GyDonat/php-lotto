@@ -7,13 +7,13 @@
     <body>
         Ez az index.php
         <?php
+            include("fgv.php");
             $sorsolt= sorsolas();
             var_dump($sorsolt);
 	//lottohuzas
                
                          echo "Ezek voltak a számok!";
             echo "Itt mar a php script fut";
-        // put your code here
         ?>
     </body>
 </html>
