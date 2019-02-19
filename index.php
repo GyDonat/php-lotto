@@ -10,10 +10,32 @@
             include("fgv.php");
             $sorsolt= sorsolas();
             var_dump($sorsolt);
-	//lottohuzas
-               
-                         echo "Ezek voltak a számok!";
-            echo "Itt mar a php script fut";
+            echo '<table border="1">';
+	
+	for($i=1; $i<=$szamokszama; $i++)
+	{
+		if($i%$oszlop==1)
+		{
+			echo "<tr>";
+		}
+		if(in_array($i, $huzott))
+		{
+			$hatterszin="#FF0000";
+		}
+		else
+		{
+			$hatterszin="#FFFFFF";
+		}
+		echo "<td bgcolor=\"$hatterszin\" >";
+			echo $i;
+		echo "</td>";
+		if($i%$oszlop==0)
+		{
+			echo "</tr>\n";
+		}
+	}
+	
+	echo "</table>";   
         ?>
     </body>
 </html>
